@@ -1,4 +1,7 @@
-// Your code goes here
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>  
+
+
+
 
 //Nav links scale on hover
 const linkScaleUp = document.querySelectorAll(".nav-link");
