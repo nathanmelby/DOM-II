@@ -46,31 +46,19 @@ linkScaleUp.forEach(item => {
 });
 
 
-// const darkMode = document.querySelector('body');
-// darkMode.addEventListener("keyPress", )
+const darkMode = document.querySelector('body');
+darkMode.addEventListener("keydown", e => {
+    darkMode.style.backgroundColor = "#696969";
+    darkMode.style.color = "white";
+});
 
-
-// const scaleUp = document.querySelectorAll('.card-img-top');
-// scaleUp.forEach(item => {
-//   item.addEventListener('mouseenter', event => {
-//     item.style.transform = 'scale(1.3)';
-//     item.style.transition = ' transform 0.5s';
-//   })
+// const lightMode = document.querySelector('body');
+// lightMode.addEventListener("keydown", e => {
+//     lightMode.style.backgroundColor = "white";
+//     lightMode.style.color = "black";
 // })
 
 
-// const keyDown = document.querySelector('.content-section .text-content h2');
-// keyDown.addEventListener('keydown', e => {
-//    console.log e.textContent += `${e.code}`;
-// })
-
-
-
-// document.addEventListener('keydown', logKey);
-
-// function logKey(e) {
-//   e.textContent += ` ${e.code}`;
-// }
     
 
 const headerClick = document.querySelector('.intro');
