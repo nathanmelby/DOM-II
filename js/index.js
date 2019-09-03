@@ -30,6 +30,7 @@ imgScale.addEventListener("mouseover", (e) => {
 //     linkScale.style.color = '@button-bg';
 // });
 
+//Nav links scale on hover
 const linkScaleUp = document.querySelectorAll(".nav-link");
 linkScaleUp.forEach(item => {
     item.addEventListener('mouseenter', event => {
@@ -45,7 +46,7 @@ linkScaleUp.forEach(item => {
     })
 });
 
-
+//DARK MODE
 const darkMode = document.querySelector('body');
 darkMode.addEventListener("keydown", e => {
     darkMode.style.backgroundColor = "#696969";
@@ -60,8 +61,16 @@ darkMode.addEventListener("keydown", e => {
 
 
     
-
+//Replaces header section with a click counter
 const headerClick = document.querySelector('.intro');
 headerClick.addEventListener('click', e => {
     headerClick.innerHTML = `Click count: ${event.detail}`;
+});
+
+//Prevents images from being saved by blocking the context menu from pulling up
+const noImgSave = document.querySelectorAll('img');
+noImgSave.forEach(item => {
+    item.addEventListener('contextmenu', e => {
+    e.preventDefault();
+    })
 });
