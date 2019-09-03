@@ -67,6 +67,7 @@ headerClick.addEventListener('click', e => {
     headerClick.innerHTML = `Click count: ${event.detail}`;
 });
 
+
 //Prevents images from being saved by blocking the context menu from pulling up
 const noImgSave = document.querySelectorAll('img');
 noImgSave.forEach(item => {
@@ -80,16 +81,7 @@ noImgSave.forEach(item => {
 
 
 
-//zoom element on scroll
-const busImg = document.querySelector('.bus'); 
-busImg.addEventListener('wheel', e => {
-    e.preventDefault();
-    scale += event.deltaY * -0.01;
-    scale = Math.min(Math.max(.125, scale), 4);
-    busImg.style.transform = `scale(${scale})`;
-})
-let scale = 1;
-el.onwheel = e
+
 
 
 
@@ -100,3 +92,36 @@ doubleClick.addEventListener('dblclick', e => {
         doubleClick.style.fontSize = '6rem';
         doubleClick.style.color = 'dodgerblue';
 });
+
+
+//resize
+window.addEventListener('resize', event => {
+    const changeTitle = document.querySelector('h2');
+    changeTitle.style.color = "tomato";
+    });
+
+
+
+
+
+
+
+//mouse over
+
+const mouseFooter = document.querySelector('.footer p');
+mouseFooter.addEventListener('mouseover', e => {
+    mouseFooter.style.fontSize = '5rem';
+    mouseFooter.style.color = 'darkolivegreen';
+});
+
+
+//zoom element on scroll
+const busImg = document.querySelector('.bus'); 
+busImg.addEventListener('wheel', e => {
+    e.preventDefault();
+    scale += event.deltaY * -0.01;
+    scale = Math.min(Math.max(.125, scale), 4);
+    busImg.style.transform = `scale(${scale})`;
+})
+let scale = 1;
+el.onwheel = e
