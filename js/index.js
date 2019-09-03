@@ -1,35 +1,5 @@
 // Your code goes here
 
-/*
-* [ ] `mouseover` --> make links grow larger
-* [ ] `keydown`
-* [ ] `wheel` --> Images
-* [ ] `drag / drop` --> headers??
-* [ ] `load`
-* [ ] `focus`
-* [ ] `resize`
-* [ ] `scroll`
-* [ ] `select`
-* [ ] `dblclick`
-'contextmenu'-right click brings up something
-
-const imgScale = document.querySelector(".card-img-top");
-imgScale.addEventListener("mouseover", (e) => {
-
-  console.log(e);
-  imgScale.style.transform = 'scale(1.1)';
-  imgScale.style.transition = ' transform 0.5s';
-});
-*/
-
-
-// const linkScale = document.querySelectorAll(".main-navigation .container .nav-container .nav .nav-link");
-// linkScale.addEventListener('mouseover', (e) => {
-//     linkScale.style.transform = 'scale(1.2)';
-//     linkScale.style.transition = 'transform 0.3s';
-//     linkScale.style.color = '@button-bg';
-// });
-
 //Nav links scale on hover
 const linkScaleUp = document.querySelectorAll(".nav-link");
 linkScaleUp.forEach(item => {
@@ -53,12 +23,12 @@ darkMode.addEventListener("keydown", e => {
     darkMode.style.color = "white";
 });
 
-// const lightMode = document.querySelector('body');
-// lightMode.addEventListener("keydown", e => {
-//     lightMode.style.backgroundColor = "white";
-//     lightMode.style.color = "black";
-// })
-
+//light MODE
+const lightMode = document.querySelector('body');
+lightMode.addEventListener("keyup", e => {
+    lightMode.style.backgroundColor = "white";
+    lightMode.style.color = "black";
+});
 
     
 //Replaces header section with a click counter
@@ -77,14 +47,6 @@ noImgSave.forEach(item => {
 });
 
 
-
-
-
-
-
-
-
-
 //DoubleClick
 
 const doubleClick = document.querySelector('.logo-heading');
@@ -99,10 +61,6 @@ window.addEventListener('resize', event => {
     const changeTitle = document.querySelector('h2');
     changeTitle.style.color = "tomato";
     });
-
-
-
-
 
 
 

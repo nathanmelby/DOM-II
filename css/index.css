@@ -357,3 +357,21 @@ img {
 .large {
   font-size: 6rem;
 }
+
+
+/* animation */
+
+.animation.active {
+  animation-duration: 2s;
+  animation-name: slidein;
+  animation-iteration-count: 2;
+}
+
+@keyframes slidein {
+  from {
+    transform: translateX(100%) scaleX(3);
+  }
+  to {
+    transform: translateX(0) scaleX(1);
+  }
+}
